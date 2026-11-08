@@ -9,7 +9,7 @@
 				"to_port": 0
 			}
 		],
-		"dialogue_text": "\"You failed the Check, I am gonna eat you now.\"",
+		"dialogue_text": "\"You failed the Check, I auser_inputm gonna eat you now.\"",
 		"node_id": "0p92706",
 		"texture": "res://.godot/imported/testbirb.svg-6ba071e7691c591fab411c882805e787.ctex",
 		"type": "dialogue"
@@ -20,7 +20,7 @@
 			{
 				"from_node": "2r64263",
 				"from_port": 0,
-				"to_node": "6r99922",
+				"to_node": "7q97991",
 				"to_port": 0
 			}
 		],
@@ -44,14 +44,6 @@
 		"texture": "res://.godot/imported/testguy.svg-41071c9a71c371e0bf342f9db98153a0.ctex",
 		"type": "dialogue"
 	},
-	"3r72054": {
-		"actor_name": "OtherGuy",
-		"connections": [],
-		"dialogue_text": "\"I can even check if some Condition is true so it triggers this Dialogue Path!\"",
-		"node_id": "3r72054",
-		"texture": "res://.godot/imported/testguy2.svg-4fd29c81343e2c78898310205f30a6eb.ctex",
-		"type": "dialogue"
-	},
 	"4o72378": {
 		"actor_name": "OtherGuy",
 		"connections": [
@@ -66,27 +58,6 @@
 		"node_id": "4o72378",
 		"texture": "res://.godot/imported/testguy2.svg-4fd29c81343e2c78898310205f30a6eb.ctex",
 		"type": "dialogue"
-	},
-	"6r99922": {
-		"condition_id": "7e16735",
-		"condition_name": "isThisConditionTrue()",
-		"condition_type": "active",
-		"connections": [
-			{
-				"from_node": "6r99922",
-				"from_port": 0,
-				"to_node": "3r72054",
-				"to_port": 0
-			},
-			{
-				"from_node": "6r99922",
-				"from_port": 1,
-				"to_node": "0p92706",
-				"to_port": 0
-			}
-		],
-		"node_id": "6r99922",
-		"type": "condition"
 	},
 	"7j49324": {
 		"connections": [
@@ -107,6 +78,28 @@
 		"hub_name": "Unnamed Hub",
 		"node_id": "7j49324",
 		"type": "hub"
+	},
+	"7q97991": {
+		"condition_compare_value": "",
+		"condition_id": "7e16735",
+		"condition_name": "isThisConditionTrue()",
+		"condition_type": "active",
+		"connections": [
+			{
+				"from_node": "7q97991",
+				"from_port": 1,
+				"to_node": "0p92706",
+				"to_port": 0
+			},
+			{
+				"from_node": "7q97991",
+				"from_port": 0,
+				"to_node": "8s42785",
+				"to_port": 0
+			}
+		],
+		"node_id": "7q97991",
+		"type": "condition"
 	},
 	"8p34756": {
 		"connections": [],

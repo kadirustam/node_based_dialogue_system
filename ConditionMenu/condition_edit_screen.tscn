@@ -95,6 +95,7 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 offset_right = 40.0
 offset_bottom = 40.0
+grow_vertical = 0
 
 [node name="ActiveCheckBox" type="CheckBox" parent="Window/Panel/Label/HBoxContainer" unique_id=1806999653]
 layout_mode = 2
@@ -111,6 +112,22 @@ text = "Passive"
 layout_mode = 2
 button_group = ExtResource("2_gym0b")
 text = "Hidden"
+
+[node name="VSeparator" type="VSeparator" parent="Window/Panel/Label/HBoxContainer" unique_id=1696406095]
+layout_mode = 2
+
+[node name="CompareCheckBox" type="CheckBox" parent="Window/Panel/Label/HBoxContainer" unique_id=1181300930]
+layout_mode = 2
+text = "IsHigherThan"
+
+[node name="Label" type="Label" parent="Window/Panel/Label/HBoxContainer" unique_id=590275309]
+layout_mode = 2
+text = "Value:"
+
+[node name="CompareEdit" type="TextEdit" parent="Window/Panel/Label/HBoxContainer" unique_id=1369743828]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
 
 [node name="CreateButton" type="Button" parent="Window" unique_id=369003395]
 anchors_preset = -1
@@ -151,5 +168,6 @@ Example: isYourMomSingle()"
 
 [connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
 [connection signal="pressed" from="Window/Panel/ConditionIdLabel/GenerateIdButton" to="." method="_on_generate_id_button_pressed"]
+[connection signal="toggled" from="Window/Panel/Label/HBoxContainer/CompareCheckBox" to="." method="_on_compare_check_box_toggled"]
 [connection signal="pressed" from="Window/CreateButton" to="." method="_on_create_button_pressed"]
 [connection signal="pressed" from="Window/CancelButton" to="." method="_on_cancel_button_pressed"]

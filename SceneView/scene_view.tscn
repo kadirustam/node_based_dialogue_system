@@ -82,6 +82,61 @@ text = "Delete Selected Nodes"
 layout_mode = 2
 size_flags_vertical = 3
 right_disconnects = true
+connections = Array[Dictionary]([{
+"from_node": &"DialogueNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"EventNode",
+"to_port": 0
+}, {
+"from_node": &"@GraphNode@61065",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"ConditionNode",
+"to_port": 0
+}, {
+"from_node": &"@GraphNode@61078",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"HubNode",
+"to_port": 0
+}, {
+"from_node": &"@GraphNode@61104",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"JumpNode",
+"to_port": 0
+}, {
+"from_node": &"ConditionNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"@GraphNode@61091",
+"to_port": 0
+}, {
+"from_node": &"ConditionNode",
+"from_port": 1,
+"keep_alive": false,
+"to_node": &"DialogueNode",
+"to_port": 0
+}, {
+"from_node": &"HubNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"@GraphNode@61065",
+"to_port": 0
+}, {
+"from_node": &"HubNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"@GraphNode@61130",
+"to_port": 0
+}, {
+"from_node": &"@GraphNode@61130",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"@GraphNode@61104",
+"to_port": 0
+}])
 minimap_enabled = false
 show_menu = false
 

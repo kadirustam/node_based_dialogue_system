@@ -11,6 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 script = ExtResource("1_8djsc")
+condition_compare_value = null
 
 [node name="ConditionLabel" type="Label" parent="." unique_id=1785277829]
 layout_mode = 1

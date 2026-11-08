@@ -1,12 +1,20 @@
 {
-	"ConditionMenuItem:<Panel#49761224383>": {
+	"ConditionMenuItem:<Panel#4612174205697>": {
+		"condition_compare_value": "",
 		"condition_id": "7e16735",
 		"condition_name": "isThisConditionTrue()",
 		"condition_type": "active"
 	},
-	"ConditionMenuItem:<Panel#49878664902>": {
+	"ConditionMenuItem:<Panel#4612291629071>": {
+		"condition_compare_value": "",
 		"condition_id": "2f71181",
 		"condition_name": "PassiveCheck()",
 		"condition_type": "passive"
+	},
+	"ConditionMenuItem:<Panel#4612409069572>": {
+		"condition_compare_value": "5",
+		"condition_id": "3g81808",
+		"condition_name": "test",
+		"condition_type": "active"
 	}
 }

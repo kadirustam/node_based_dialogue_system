@@ -35,7 +35,17 @@ slot/2/right_type = 0
 slot/2/right_color = Color(1, 1, 1, 1)
 slot/2/right_icon = null
 slot/2/draw_stylebox = true
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color(1, 1, 1, 1)
+slot/3/left_icon = null
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color(1, 1, 1, 1)
+slot/3/right_icon = null
+slot/3/draw_stylebox = true
 script = ExtResource("1_30nq8")
+condition_compare_value = null
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1996643750]
 layout_mode = 2
@@ -62,6 +72,19 @@ text = "Hidden"
 layout_mode = 2
 
 [node name="ConditionEdit" type="TextEdit" parent="." unique_id=1593335702]
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+editable = false
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=2037091209]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer2" unique_id=2146385458]
+layout_mode = 2
+text = "Value:"
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer2" unique_id=263290250]
+custom_minimum_size = Vector2(50, 30)
 layout_mode = 2
 editable = false

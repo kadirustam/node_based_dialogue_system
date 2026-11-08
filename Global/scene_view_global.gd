@@ -57,18 +57,18 @@ func create_and_connect_jump_node(hub_name: String, hub_id: String, position: Ve
 		graph.add_child(jump_node)
 		_move_node_to_position(jump_node, position, from_node, from_port)
 
-func create_condition_node(name: String, id: String, type: String,
+func create_condition_node(name: String, id: String, type: String, compare_value: String,
 	node_id: String = _generate_node_id()) -> void:
 		_close_window()
 		var condition_node = condition_node_scene.instantiate()
-		condition_node.set_up_node(node_id, name, id, type)
+		condition_node.set_up_node(node_id, name, id, type, compare_value)
 		graph.add_child(condition_node)
 
-func create_and_connect_condition_node(name: String, id: String, type: String, position: Vector2 = Vector2(0,0), from_node = null, from_port = null,
+func create_and_connect_condition_node(name: String, id: String, type: String, compare_value: String, position: Vector2 = Vector2(0,0), from_node = null, from_port = null,
 	node_id: String = _generate_node_id()) -> void:
 		_close_window()
 		var condition_node = condition_node_scene.instantiate()
-		condition_node.set_up_node(node_id, name, id, type)
+		condition_node.set_up_node(node_id, name, id, type, compare_value)
 		graph.add_child(condition_node)
 		_move_node_to_position(condition_node, position, from_node, from_port)
 
@@ -164,7 +164,7 @@ func _save_jump_nodes(dict_to_json: Dictionary) -> void:
 func _save_condition_nodes(dict_to_json: Dictionary) -> void:
 	for node in get_tree().get_nodes_in_group("condition_nodes"):
 		dict_to_json[node.node_id] = { "type": "condition", "node_id": node.node_id, "condition_id": node.condition_id, "condition_name": node.condition_name,
-			"condition_type": node.condition_type }
+			"condition_type": node.condition_type, "condition_compare_value": node.condition_compare_value}
 
 func _save_event_nodes(dict_to_json: Dictionary) -> void:
 	for node in get_tree().get_nodes_in_group("event_nodes"):
@@ -203,7 +203,7 @@ func _create_node_from_data(entry: Variant) -> void:
 		"dialogue": create_dialogue_node(ActorMenuGlobal.get_actor_from_list(entry.actor_name), entry.dialogue_text, entry.node_id)
 		"hub": create_hub_node(entry.hub_id, entry.hub_name)
 		"jump": create_jump_node(entry.target_name, entry.target_id, entry.node_id)
-		"condition": create_condition_node(entry.condition_name,entry.condition_id, entry.condition_type, entry.node_id)
+		"condition": create_condition_node(entry.condition_name, entry.condition_id, entry.condition_type, entry.condition_compare_value, entry.node_id)
 		"event": create_event_node(entry.event_id, entry.event)
 
 func _create_connections_from_data(connections: Variant) -> void:
